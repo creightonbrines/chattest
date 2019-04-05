@@ -1,0 +1,22 @@
+<?php
+// Get Username
+$user = $_GET['u']
+?>
+<html>
+<head>
+  <title>Chatbox</title>
+  <link rel='stylesheet' type='text/css' href='css/style.css'>
+</head>
+<body>
+<div class='chatContainer'>
+  <div class='chatHeader>
+    <h2>Welcome <?php echo ucwords($user); ?></h2>
+  </div>
+  <div class='chatMessages'></div>
+  <div class='chatBottem'>
+    <form action='#' onSubmit='return false;' id='chatForm'>
+      <input type='hidden' id='name' value='<?php echo $user; ?>'/>
+      <input type='text' name='text' id='text' value='' placeolder='type your message' />
+    </form>
+  </div>
+</div>
